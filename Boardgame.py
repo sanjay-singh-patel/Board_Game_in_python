@@ -31,12 +31,11 @@ class Game(Player, Board):
             self.play_game = False
             print(f'{player_one.name} Wins')
             return True
-        elif player_two.current_position == my_board.size - 1:
+        if player_two.current_position == my_board.size - 1:
             self.play_game = False
             print(f'{player_two.name} Wins')
             return True
-        else:
-            return False
+        return False
 
 
 if __name__ == '__main__':
